@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Create Task";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Create Task</h1>
+
+    <div class="d-flex justify-content-center">
+        <form action="@Url.Action("Create", "Task")" method="get" class="w-75">
+
+            <div class="row mb-3">
+                <div class="col-md-8 text-start">
+                    <label for="task-title" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="task-title" name="task-title" required>
+                </div>
+                <div class="col-md-3 text-start">
+                    <label for="task-deadline" class="form-label">Deadline</label>
+                    <input type="datetime-local" class="form-control" id="task-deadline" name="task-deadline" required>
+                </div>
+            </div>
+
+            <div class="mb-3 text-start">
+                <label for="task-description" class="form-label">Description</label>
+                <textarea name="task-description" id="description" class="form-control" rows="10" required></textarea>
+            </div>
+
+            <div class="mb-3 form-check text-start">
+                <input type="checkbox" class="form-check-input" name="task-complete" id="task-complete" aria-describedby="completedHelp">
+                <label class="form-check-label" for="task-complete">Task Complete</label>
+                <div class="form-text" id="completedHelp">Check this box if the task is complete.</div>
+            </div>
+
+            <button type="submit" class="btn btn-success">Create</button>
+        </form>
+    </div>
+</div>

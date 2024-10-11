@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <div class="container">
+        <h1>Welcome to Your Task Management System</h1>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Create a New Task</h2>
+                <p>Click the button below to create a new task.</p>
+                <a href="@Url.Action("Add", "Task")" class="btn btn-primary">Create Task</a>
+            </div>
+            <div class="col-md-6">
+                <h2>View Your Tasks</h2>
+                <p>Click the button below to view and manage your existing tasks.</p>
+                <a href="@Url.Action("Items", "Task")" class="btn btn-secondary">View Tasks</a>
+            </div>
+        </div>
+    </div>
+</div>
